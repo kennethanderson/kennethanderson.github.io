@@ -1,0 +1,100 @@
+/* copyright Ken Anderson, 2015 */
+
+/* Container */
+html, body {height:100%;margin:0;}
+#container {
+	height: 100%;
+	margin: 4em auto 0 auto;
+}
+header, footer, #container {
+	max-width: 700px;
+}
+
+/* Positioning header, footer, content */
+footer {
+	margin: 0 0 0 0;
+	text-align: center;
+}
+footer, header {
+	width: 100%;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+}
+#content {
+	margin: 0;
+	padding: 8px;
+	background-color: #D5D5D5;
+	min-height: 100%;
+}
+
+/* Fixing the header */
+header {
+	position: fixed;
+	margin: -4em 0 0 0;
+	height: 4em;
+	line-height:4em;
+	background-color: white;
+	z-index: 1;
+}
+a.anchor{display: block; position: relative; top:-4em; visibility: hidden;}
+
+/* Header-specific styling */
+header img {
+	display: inline-block;
+	height: 2em;
+	vertical-align: middle;
+}
+#logo {
+	text-shadow: 2px 2px #cccccc;
+	display: inline-block;	
+	float: left;
+	height:100%;
+	/*padding-left: 3em;*/
+}
+header nav {
+	float: right;
+	/*padding-right: 3em;*/
+	display: inline-block;
+	vertical-align: middle;
+}
+header ul {
+	list-style-type: none;
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+header li {
+	display: inline-block;
+}
+header a {
+	display: inline-block;
+	padding: 0 5px 0 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: black;
+	transition: .5s background-color;
+}
+header a:hover {
+	background-color:#AAAAAA;
+}
+
+/* Content-specific styling */
+section {
+	position: relative;
+	padding-right: 200px;
+	display:inline-block;
+	min-height:200px;
+}
+section img {
+	display:inline-block; 
+	position: absolute;
+	top:4em;right:0;
+	max-width:180px;
+	max-height:120px;
+	/*width:120px;*/
+}
+
+.clearfix {
+	clear: both;
+}
