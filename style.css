@@ -1,4 +1,4 @@
-/* copyright Ken Anderson, 2015 */
+/* copyright Ken Anderson, 2015-2016 */
 
 /* Container */
 html, body {height:100%;margin:0;}
@@ -82,7 +82,7 @@ header a:hover {
 /* Content-specific styling */
 section {
 	position: relative;
-	padding-right: 200px;
+	padding-right: 220px;
 	display:inline-block;
 	min-height:200px;
 }

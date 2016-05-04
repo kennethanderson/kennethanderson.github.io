@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,14 +29,14 @@
 
 <div id="content">
 
-
+{{#sections}}
   <section>
-    
-    <h1>Ken Anderson</h1>
-    <p>I am a software engineer in Ottawa, Canada. My interests include robotics, artificial intelligence, data fusion, and video processing. I have worked on a variety of projects over the years in academia and industry. You can find out more information about my projects and experience in the following pages.</p>
-    <img src="images/KenAndPr2.JPG" alt="">
+    {{#anchor}}<a id="{{anchor}}" class="anchor"></a>{{/anchor}}
+    <h1>{{title}}</h1>
+    {{text}}
+    {{#image}}<img src="{{image}}" alt="">{{/image}}
   </section>
-
+{{/sections}}
 
 </div>
 
@@ -46,4 +45,3 @@
 </div>
 </body>
 </html>
-
