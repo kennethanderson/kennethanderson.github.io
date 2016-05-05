@@ -1,7 +1,8 @@
 /* copyright Ken Anderson, 2015-2016 */
 
 /* Container */
-html, body {height:100%;margin:0;}
+html {height:100%;margin:0;}
+body {height: 100%;}
 #container {
 	height: 100%;
 	margin: 4em auto 0 auto;
@@ -11,10 +12,6 @@ header, footer, #container {
 }
 
 /* Positioning header, footer, content */
-footer {
-	margin: 0 0 0 0;
-	text-align: center;
-}
 footer, header {
 	width: 100%;
 	border-top: 1px solid #AAAAAA;
@@ -27,59 +24,58 @@ footer, header {
 	min-height: 100%;
 }
 
-/* Fixing the header */
 header {
+	display: inline-block;
 	position: fixed;
 	margin: -4em 0 0 0;
 	height: 4em;
 	line-height:4em;
 	background-color: white;
 	z-index: 1;
+	vertical-align: middle;
 }
 a.anchor{display: block; position: relative; top:-4em; visibility: hidden;}
 
-/* Header-specific styling */
-header img {
+/* Header styling */
+header nav {
+	width: 100%;
+	height: 100%;
+	line-height: 2em;
+	vertical-align: middle;
+}
+header nav ul {
+	height: 100%;
+	vertical-align: middle;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+header nav li { 
+	float: right;
+	display: inline-block;
+}
+header nav img {
 	display: inline-block;
 	height: 2em;
 	vertical-align: middle;
 }
-#logo {
-	text-shadow: 2px 2px #cccccc;
-	display: inline-block;	
-	float: left;
-	height:100%;
-	/*padding-left: 3em;*/
-}
-header nav {
-	float: right;
-	/*padding-right: 3em;*/
-	display: inline-block;
-	vertical-align: middle;
-}
-header ul {
-	list-style-type: none;
-	list-style: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-header li {
-	display: inline-block;
-}
-header a {
+header nav a {
 	display: inline-block;
 	padding: 0 5px 0 5px;
-	border-radius: 5px;
+	border-radius: 4px;
 	text-decoration: none;
 	color: black;
 	transition: .5s background-color;
 }
-header a:hover {
+header nav #logo {
+	text-shadow: 2px 2px #cccccc;
+	float: left;
+}
+header nav a:hover {
 	background-color:#AAAAAA;
 }
 
-/* Content-specific styling */
+/* Section styling */
 section {
 	position: relative;
 	padding-right: 220px;
@@ -92,7 +88,12 @@ section img {
 	top:4em;right:0;
 	max-width:200px;
 	max-height:140px;
-	/*width:120px;*/
+}
+
+/* Footer styling */
+footer {
+	margin: 0 0 0 0;
+	text-align: center;
 }
 
 .clearfix {
