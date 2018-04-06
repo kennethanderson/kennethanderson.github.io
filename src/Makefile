@@ -3,7 +3,7 @@
 #   json + template --> html
 #
 
-MUSTACHE=../../../idl/bin/mustache
+MUSTACHE=mustache
 OBJS=../index.html ../ai.html ../publications.html ../robotics.html ../video.html
 
 all: $(OBJS)
@@ -18,6 +18,6 @@ all: $(OBJS)
 	$(MUSTACHE) robotics.json template.html > ../robotics.html
 ../video.html: video.json template.html
 	$(MUSTACHE) video.json template.html > ../video.html
-	
+
 clean:
 	rm $(OBJS)

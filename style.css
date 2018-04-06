@@ -78,8 +78,10 @@ header nav a:hover {
 /* Section styling */
 section {
 	position: relative;
-	padding-right: 220px;
 	display:inline-block;
+}
+section.hasimg {
+	padding-right: 220px;
 	min-height:200px;
 }
 section img {
@@ -88,6 +90,9 @@ section img {
 	top:4em;right:0;
 	max-width:200px;
 	max-height:140px;
+}
+section li {
+	padding: 5px;
 }
 
 /* Footer styling */

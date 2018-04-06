@@ -22,7 +22,7 @@ sections: [
     anchor: "deepgreen",
     title: "Billiards",
     image: "images/pooltable.png",
-    text: "<p>At Queen's University I used computer-vision and trigonometric techniques to localize and identify pool balls for the Deep Green&#8482; pool-playing robot.  This enabled the game state to be encoded, visualized, strategically analysed, then acted upon.  At the completion of my work, Deep Green could compete with a human opponent.</p>"
+    text: "<p>At Queen's University I used computer-vision and trigonometric techniques to localize and identify pool balls for the Deep Green&trade; pool-playing robot.  This enabled the game state to be encoded, visualized, strategically analysed, then acted upon.  At the completion of my work, Deep Green could compete with a human opponent.</p>"
   }
 ]
 }
