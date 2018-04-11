@@ -3,7 +3,7 @@ sections: [
   {
     anchor: "avidbots",
     title: "Avidbots",
-    image: "images/avidbots5.jpg",
+    image: "images/neo.jpg",
     text: "<p>At Avidbots, I wrote the software framework for two large-scale commercial floor-cleaning robots.  This framework includes components for motion planning, communication, visualization, live view, and control.  The motion planner encompasses the  most complexity, containing a complete coverage planning algorithm, dynamic and static constraints, and dynamic obstacle avoidance.  Avidbots was a 2014 Haxlr8r incubator participant, a 2014 Robot Launch semifinalist, has raised multiple rounds, and has over 80 employees.</p>"
   },
   {
