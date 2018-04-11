@@ -8,16 +8,8 @@ OBJS=../index.html ../ai.html ../publications.html ../robotics.html ../video.htm
 
 all: $(OBJS)
 
-../index.html: index.json template.html
-	$(MUSTACHE) index.json template.html > ../index.html
-../ai.html: ai.json template.html
-	$(MUSTACHE) ai.json template.html > ../ai.html
-../publications.html: publications.json template.html
-	$(MUSTACHE) publications.json template.html > ../publications.html
-../robotics.html: robotics.json template.html
-	$(MUSTACHE) robotics.json template.html > ../robotics.html
-../video.html: video.json template.html
-	$(MUSTACHE) video.json template.html > ../video.html
+../%.html: %.json template.html
+	$(MUSTACHE) $< template.html > $@
 
 clean:
 	rm $(OBJS)
