@@ -3,13 +3,15 @@
 #   json + template --> html
 #
 
-MUSTACHE=mustache
 OBJS=../index.html ../ai.html ../publications.html ../robotics.html ../video.html
 
 all: $(OBJS)
 
 ../%.html: %.json template.html
-	$(MUSTACHE) $< template.html > $@
+	awk -f template.awk $< > $@
+
+#old way
+#	mustache $< template.html > $@
 
 clean:
 	rm $(OBJS)
