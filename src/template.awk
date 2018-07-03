@@ -1,6 +1,4 @@
-BEGIN { 
-  FS="\"";
-
+BEGIN {
   print "<!DOCTYPE html>"
   print "<html lang=\"en\">"
   print ""
@@ -33,55 +31,48 @@ BEGIN {
   print 
 }
 
-{
-  if (TEXT && !TEXTEND) {
-    # concatenate multi-lines
-    #print "match " match(TEXT, />"/) " " length(TEXT) ".." substr(TEXT, length(TEXT)-10);
-    TEXTEND = match(TEXT, />"/);
-    if (TEXTEND) {
-      TEXT=substr(TEXT, 1, TEXTEND); # remove ending quote
-      gsub(/\\"/, "\"", TEXT);   # convert quotes
-      # print "E len " length(TEXT) ".." substr(TEXT, length(TEXT)-5);}
-    } else {
-      TEXT = TEXT "\n" $0;
-      #print "a len " length(TEXT) ".." substr(TEXT, length(TEXT)-5); next;}
-    }
+# %% delineates muli-line records
+$1 ~ /%%/ {
+  if (IMAGE) {
+    print "  <section class=\"hasimg\">"
+  } else {
+    print "  <section>"
   }
-  if ($1 == "    anchor: ") {ANCHOR=$2; }
-  if ($1 == "    title: " ) {TITLE=$2; }
-  if ($1 == "    image: " ) {IMAGE=$2; }
-  if ($1 == "    text: "  ) {TEXT=substr($0, 12); TEXTEND=0; next; }
+  if (ANCHOR) {
+    print "    <a id=\"" ANCHOR "\" class=\"anchor\"></a>"
+  }
+  if (TITLE) {
+    print "    <h1>" TITLE "</h1>"
+  }
+    print "    " TEXT
+  if (IMAGE) {
+    print "    <img src=\"" IMAGE "\" alt=\"\">"
+  }
+  print "  </section>"
+  print ""
+  EOR="EOR"; 
+}
+
+{
   
-  if (TEXT && TEXTEND) {
+  if (EOR) {
     #debug
-    #print "==>ANCHOR=" ANCHOR
-    #print "==>TITLE=" TITLE
-    ##print "==>IMAGE=" IMAGE
-    #print "==>TEXT=" TEXT
-    if (IMAGE) {
-      print "  <section class=\"hasimg\">"
-    } else {
-      print "  <section>"
-    }
-    if (ANCHOR) {
-      print "    <a id=\"" ANCHOR "\" class=\"anchor\"></a>"
-    }
-    if (TITLE) {
-      print "    <h1>" TITLE "</h1>"
-    }
-      print "    " TEXT
-    if (IMAGE) {
-      print "    <img src=\"" IMAGE "\" alt=\"\">"
-    }
-    print "  </section>"
-    print ""
+    #print "==> ANCHOR=" ANCHOR "==="
+    #print "==> TITLE=" TITLE "==="
+    #print "==> IMAGE=" IMAGE "==="
+    #print "==> TEXT=" TEXT "==="
     # reset
     ANCHOR="";
     TITLE="";
     IMAGE="";
     TEXT="";
-    TEXTEND=0;
+    EOR="";
   }
+  else if ($1 == "anchor:") {ANCHOR=substr($0, 9);}
+  else if ($1 == "title:" ) {TITLE=substr($0, 8);}
+  else if ($1 == "image:" ) {IMAGE=substr($0, 8);}
+  else if ($1 == "text:"  ) {TEXT=substr($0, 7);}
+  else if (TEXT != "") {TEXT = TEXT "\n" $0;} # concatenate
 }
 
 END {

@@ -7,7 +7,7 @@ OBJS=../index.html ../ai.html ../publications.html ../robotics.html ../video.htm
 
 all: $(OBJS)
 
-../%.html: %.json template.html
+../%.html: %.txt template.awk
 	awk -f template.awk $< > $@
 
 #old way
