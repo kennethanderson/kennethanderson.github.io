@@ -1,6 +1,7 @@
 anchor: pubs
 title: Publications
-text: <ul>
+text: 
+    <ul>
     <li>Ken Anderson, "Tree Cache". Symposium on Combinatorial Search (SoCS). 2012.</li>
 
     <li>Kenneth Anderson, "<a href="docs/anderson2010additive.pdf">Additive Heuristic for Four-Connected Gridworlds</a>". Symposium on Combinatorial Search (SoCS). 2010.</li>

@@ -29,6 +29,8 @@ BEGIN {
   print ""
   print "<div id=\"content\">"
   print 
+
+  LINENUM = 1
 }
 
 # %% delineates muli-line records
@@ -44,17 +46,21 @@ $1 ~ /%%/ {
   if (TITLE) {
     print "    <h1>" TITLE "</h1>"
   }
-    print "    " TEXT
+  if (TEXT) {
+    print TEXT
+  } else {
+    print "Error (line " LINENUM "): text missing!" > "/dev/stderr"
+    exit 1
+  }
   if (IMAGE) {
     print "    <img src=\"" IMAGE "\" alt=\"\">"
   }
   print "  </section>"
   print ""
-  EOR="EOR"; 
+  EOR=1; 
 }
 
 {
-  
   if (EOR) {
     #debug
     #print "==> ANCHOR=" ANCHOR "==="
@@ -66,13 +72,19 @@ $1 ~ /%%/ {
     TITLE="";
     IMAGE="";
     TEXT="";
-    EOR="";
+    INTEXT=0;
+    EOR=0;
   }
   else if ($1 == "anchor:") {ANCHOR=substr($0, 9);}
   else if ($1 == "title:" ) {TITLE=substr($0, 8);}
   else if ($1 == "image:" ) {IMAGE=substr($0, 8);}
-  else if ($1 == "text:"  ) {TEXT=substr($0, 7);}
-  else if (TEXT != "") {TEXT = TEXT "\n" $0;} # concatenate
+  else if ($1 == "text:"  ) {TEXT=substr($0, 7, length($0)-8); INTEXT=1;}
+  else if (INTEXT) {
+    if (!TEXT) {TEXT = $0;}
+    else       {TEXT = TEXT "\n" $0;} # concatenate
+  }
+
+  LINENUM = LINENUM + 1
 }
 
 END {
