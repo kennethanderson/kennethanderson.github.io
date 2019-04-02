@@ -1,0 +1,39 @@
+Dependencies:
+- asciidoc
+
+Asciidoc allows me to write entire html pages in simple syntax, 
+which can be converted directly to styled html.
+Some other good things about asciidoc--
+- asciidoc has a single standard, and is extensible.
+- asciidoc can convert to multiple output types.
+- asciidoc has syntax highlighting in vim.
+- asciidoc converts bullet/numbered lists, (R)(TM)(C), arrows by default.
+- asciidoc is recommended by Linus Torvalds and Eric Raymond.
+
+On the downside-- 
+- asciidoc is more complicated and requires bigger installation package(s).
+- asciidoc implementation is in Python.
+  asciidoctor implementation is in Ruby. (which is ~25x faster... actually).
+
+For syntax help--
+- https://powerman.name/doc/asciidoc
+
+--------------
+
+Some other options:
+
+Markdown--
+- markdown is only converted outside block elements, doesn't handle tables, etc.
+  The block element is a big problem, it would force me to split every section (with a header)
+  then recombine them all!  Leading to serious file proliferation.
+- markdown has multiple 'flavours' to deal with some of these deficiencies.  
+  But then you have to choose a standard and cross your fingers.
+
+awk + template--
+- a variety of special cases that other templating engines would handle more simply.
++ but it is already on most linux systems.
+
+Or json + mustache--
+- json may be overkill.
+- Quotes and special characters require hand-editing.
+

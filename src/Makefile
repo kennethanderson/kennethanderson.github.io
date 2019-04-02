@@ -1,17 +1,20 @@
 #
-# Generate the html pages by using mustache: 
-#   json + template --> html
+# Generate the html pages by using a template: 
+#   txt + template --> html
 #
 
-OBJS=../index.html ../ai.html ../publications.html ../robotics.html ../video.html
+HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
 
-all: $(OBJS)
+all: $(HTML)
 
-../%.html: %.txt template.awk
-	awk -f template.awk $< > $@
+../%.html: %.adoc template.conf
+	asciidoc --conf-file=template.conf -a linkcss -o ../$*.html $*.adoc
 
-#old way
+#old ways
+#../%.html: %.txt template.awk
+#	awk -f template.awk $< > $@
 #	mustache $< template.html > $@
 
 clean:
-	rm $(OBJS)
+	rm -f $(HTML)
+

@@ -76,23 +76,26 @@ header nav a:hover {
 }
 
 /* Section styling */
-section {
+#content .sect1 {
 	position: relative;
-	display:inline-block;
+	min-height:180px;
 }
-section.hasimg {
+.hasimg .sect1 {
 	padding-right: 220px;
-	min-height:200px;
 }
-section img {
-	display:inline-block; 
+#content .imageblock {
 	position: absolute;
-	top:4em;right:0;
+	right:0;top:0;
+	width: 220px; height: 100%;
+}
+#content .imageblock .content {
+	position: absolute;
+	top:2.5em;
+	left: 50%; transform: translateX(-50%);
+}
+#content .imageblock .content img {
 	max-width:200px;
 	max-height:140px;
-}
-section li {
-	padding: 5px;
 }
 
 /* Footer styling */
@@ -104,3 +107,7 @@ footer {
 .clearfix {
 	clear: both;
 }
+
+/* DEBUG */
+/*p, h2, img { opacity: 0.1; }*/
+
