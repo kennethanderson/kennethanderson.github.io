@@ -5,9 +5,9 @@ Asciidoc allows me to write entire html pages in simple syntax,
 which can be converted directly to styled html.
 Some other good things about asciidoc--
 - asciidoc has a single standard, and is extensible.
-- asciidoc can convert to multiple output types.
 - asciidoc has syntax highlighting in vim.
-- asciidoc converts bullet/numbered lists, (R)(TM)(C), arrows by default.
+- asciidoc converts bullet/numbered lists, tables, (R)(TM)(C), arrows by default.
+- asciidoc can convert to multiple output types.
 - asciidoc is recommended by Linus Torvalds and Eric Raymond.
 
 On the downside-- 
@@ -20,20 +20,28 @@ For syntax help--
 
 --------------
 
-Some other options:
+Other options:
 
-Markdown--
+reStructuredText (viable)
+- https://lwn.net/Articles/692704/
+  The linux kernel documentation went through some iterations/tests that
+  started with asciidoc/Docbook and 
+  settled on reStructuredTex (using Sphinx).
+- asciidoc and reStructuredText are about equivalent for our purposes.
+- rst doesn't really do tables by default.
+
+Markdown (discarded)
 - markdown is only converted outside block elements, doesn't handle tables, etc.
   The block element is a big problem, it would force me to split every section (with a header)
   then recombine them all!  Leading to serious file proliferation.
 - markdown has multiple 'flavours' to deal with some of these deficiencies.  
   But then you have to choose a standard and cross your fingers.
 
-awk + template--
-- a variety of special cases that other templating engines would handle more simply.
-+ but it is already on most linux systems.
+line-oriented data + awk template (discarded)
+- handling multiline data in awk was a royal pain.
++ awk is ubiquitous on linux systems.
 
-Or json + mustache--
+json data + mustache template (discarded)
 - json may be overkill.
 - Quotes and special characters require hand-editing.
 
