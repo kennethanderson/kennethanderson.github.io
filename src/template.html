@@ -24,32 +24,30 @@
 </nav>
 </header>
 </div>
-<div  class="clearfix"></div>
+<div class="clearfix"></div>
 
-<div id="content">
+<div id="content"{{#hasimg}} class="hasimg"{{/hasimg}}>
 
-{{#sections}}
-{{#image}}
-  <section class="hasimg">
-{{/image}}
-{{^image}}
+{{#Title}}
+  <h1>{{Title}}</h1>
+{{/Title}}
+
+{{#Sections}}
   <section>
-{{/image}}
-{{#anchor}}
-    <a id="{{anchor}}" class="anchor"></a>
-{{/anchor}}
-    <h1>{{title}}</h1>
-    {{{text}}}
-{{#image}}
-    <img src="{{image}}" alt="">
-{{/image}}
+    <h2>{{Title}}</h2>
+    <div class="sectionbody">
+    {{{Content}}}
+    </div>
+{{#Image}}
+    <div class="imageblock"><div class="content">
+    <img src="{{Image}}" alt="">
+    </div></div>
+{{/Image}}
   </section>
+{{/Sections}}
 
-{{/sections}}
 </div>
-
-<footer>Copyright &copy; Ken Anderson, 2007-2018</footer>
-
+<footer>Copyright &copy; Ken Anderson, 2007-2020</footer>
 </div>
 </body>
 </html>

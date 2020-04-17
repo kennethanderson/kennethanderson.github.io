@@ -1,5 +1,13 @@
 Dependencies:
-- asciidoc
+- mustache (templating engine)
+
+Although this is a simple site, making it mobile friendly 
+requires fine-tuned html output.  A templating engine 
+enables this.
+
+--------------
+
+Considered options:
 
 Asciidoc allows me to write entire html pages in simple syntax, 
 which can be converted directly to styled html.
@@ -17,10 +25,6 @@ On the downside--
 
 For syntax help--
 - https://powerman.name/doc/asciidoc
-
---------------
-
-Other options:
 
 reStructuredText (viable)
 - https://lwn.net/Articles/692704/

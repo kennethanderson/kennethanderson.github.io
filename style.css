@@ -76,11 +76,11 @@ header nav a:hover {
 }
 
 /* Section styling */
-#content .sect1 {
+#content section {
 	position: relative;
 	min-height:180px;
 }
-.hasimg .sect1 {
+.hasimg section {
 	padding-right: 220px;
 }
 #content .imageblock {
@@ -93,7 +93,7 @@ header nav a:hover {
 	top:2.5em;
 	left: 50%; transform: translateX(-50%);
 }
-#content .imageblock .content img {
+#content img {
 	max-width:200px;
 	max-height:140px;
 }

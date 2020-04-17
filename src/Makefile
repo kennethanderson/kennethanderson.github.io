@@ -7,14 +7,14 @@ HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.
 
 all: $(HTML)
 
-../%.html: %.adoc template.conf
-	asciidoc --conf-file=template.conf -a linkcss -o ../$*.html $*.adoc
+../%.html: %.yaml template.html
+	mustache $*.yaml template.html > ../$*.html
 
 #old ways
 #../%.html: %.txt template.awk
+#	asciidoc --conf-file=template.conf -a linkcss -o ../$*.html $*.adoc
 #	awk -f template.awk $< > $@
 #	mustache $< template.html > $@
 
 clean:
 	rm -f $(HTML)
-

@@ -1,0 +1,14 @@
+#
+# Do NOT use multidocument YAML.
+# Although the mustache manpage says it's supported, it is not.
+# Try the example and see...
+#
+
+#<div id="content" class="hasimg">
+hasimg: true
+Sections:
+- Title: Ken Anderson
+  Content:
+    <div class="paragraph"><p>I am a software engineer in Ottawa, Canada. My interests include robotics, artificial intelligence, data fusion, and video processing. I have worked on a variety of projects over the years in academia and industry. You can find out more information about my projects and experience in the following pages.</p></div>
+  Image: "images/KenAndPr2.JPG"
+
