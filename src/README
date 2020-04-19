@@ -1,9 +1,18 @@
 Dependencies:
+- markdown (text -> html)
 - mustache (templating engine)
 
 Although this is a simple site, making it mobile friendly 
-requires fine-tuned html output.  A templating engine 
-enables this.
+requires fine-tuned html output.  
+Markdown allows me to write sections in text and 
+convert it to html snippets.
+A templating engine allows me fine-grained control over
+combining the html snippets.
+
+Markdown and Mustache are simple and well-used.  But there are some pecularities...
+- Markdown should only be used for small sections.
+- Mustache does _not_ support multidoc YAML (the manpage is wrong).
+- Mustache's partials _must_ use the .mustache suffix.
 
 --------------
 
@@ -17,6 +26,7 @@ Some other good things about asciidoc--
 - asciidoc converts bullet/numbered lists, tables, (R)(TM)(C), arrows by default.
 - asciidoc can convert to multiple output types.
 - asciidoc is recommended by Linus Torvalds and Eric Raymond.
+- used to in git project.
 
 On the downside-- 
 - asciidoc is more complicated and requires bigger installation package(s).
@@ -34,7 +44,7 @@ reStructuredText (viable)
 - asciidoc and reStructuredText are about equivalent for our purposes.
 - rst doesn't really do tables by default.
 
-Markdown (discarded)
+Markdown
 - markdown is only converted outside block elements, doesn't handle tables, etc.
   The block element is a big problem, it would force me to split every section (with a header)
   then recombine them all!  Leading to serious file proliferation.
@@ -45,7 +55,7 @@ line-oriented data + awk template (discarded)
 - handling multiline data in awk was a royal pain.
 + awk is ubiquitous on linux systems.
 
-json data + mustache template (discarded)
-- json may be overkill.
-- Quotes and special characters require hand-editing.
+yaml/json data + mustache template
+- yaml format is simpler to read/edit (line-oriented).
+  json is difficult to read, and quotes/special characters require hand-editing.
 

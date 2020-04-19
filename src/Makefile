@@ -1,20 +1,25 @@
 #
-# Generate the html pages by using a template: 
-#   txt + template --> html
+# Generate html snippets with markdown:
+#   md --> html
+# Generate the html pages with a template: 
+#   yaml + mustache --> html
 #
 
-HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
+HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html nav.mustache
 
 all: $(HTML)
 
-../%.html: %.yaml template.html
-	mustache $*.yaml template.html > ../$*.html
+nav.mustache: nav.md
+	markdown nav.md > nav.mustache
+
+../%.html: %.yaml template.mustache nav.mustache
+	mustache $*.yaml template.mustache > ../$*.html
 
 #old ways
 #../%.html: %.txt template.awk
 #	asciidoc --conf-file=template.conf -a linkcss -o ../$*.html $*.adoc
 #	awk -f template.awk $< > $@
-#	mustache $< template.html > $@
+#	mustache $< template.mustache > $@
 
 clean:
-	rm -f $(HTML)
+	rm -f $(HTML) nav.mustache
