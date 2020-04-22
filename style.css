@@ -67,7 +67,7 @@ header nav a {
 	color: black;
 	transition: .5s background-color;
 }
-header nav img { /*logo*/
+header nav ul > li:first-child { /*logo*/
 	text-shadow: 2px 2px #cccccc;
 	float: left;
 }

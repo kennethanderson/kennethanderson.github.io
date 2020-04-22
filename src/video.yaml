@@ -2,21 +2,21 @@ hasimg: true
 Sections:
 - Title: Video Security
   Image: "images/fortirecorder.png"
-  Content: |
-    <div class="paragraph"><p>At Fortinet, I was part of the original team that created FortiRecorder, a web-based network video recorder launched in January 2013.  I developed multiprotocol video streaming, recording, and playback capabilities (including html5, h265, aac, etc).  I implemented video analytics engine, performance optimization, high-performance simulator, and many other things.</p></div>
+  Markdown: |
+    At Fortinet, I was part of the original team that created FortiRecorder, a web-based network video recorder launched in January 2013.  I developed multiprotocol video streaming, recording, and playback capabilities (including html5, h265, aac, etc).  I implemented video analytics engine, performance optimization, high-performance simulator, and many other things.
 
 - Title: Video Security
   Image: "images/command.png"
-  Content: |
-    <div class="paragraph"><p>At March Networks I developed features such as low latency and graceful degradation of live streaming video, synchronized video playback, and sealed video export for the Command product line.  Command is an award-winning new product using cutting-edge technologies for web-based video surveillance systems. These systems are specifically designed for functionality, scalability, low latency, high quality, and international deployment.</p></div>
+  Markdown: |
+    At March Networks I developed features such as low latency and graceful degradation of live streaming video, synchronized video playback, and sealed video export for the Command product line.  Command is an award-winning new product using cutting-edge technologies for web-based video surveillance systems. These systems are specifically designed for functionality, scalability, low latency, high quality, and international deployment.
 
 - Title: Territorial Security
   Image: "images/videoAnalytics.jpg"
-  Content: |
-    <div class="paragraph"><p>At Larus Technologies I developed video analytic technologies for territorial security scenarios.  The system detects, tracks, and recognizes types of objects (license plates, faces, etc.).  It also detects suspicious behaviors, counts objects, and raises alerts.  This system is part of Larus' Nexus solution, which provides sensor-network-based intelligent surveillance.</p></div>
+  Markdown: |
+    At Larus Technologies I developed video analytic technologies for territorial security scenarios.  The system detects, tracks, and recognizes types of objects (license plates, faces, etc.).  It also detects suspicious behaviors, counts objects, and raises alerts.  This system is part of Larus' Nexus solution, which provides sensor-network-based intelligent surveillance.
 
 - Title: Billiards
   Image: "images/pooltable.png"
-  Content: |
-    <div class="paragraph"><p>At Queen&#8217;s University I used computer-vision and trigonometric techniques to localize and identify pool balls for the Deep Green&#8482; pool-playing robot.  This enabled the game state to be encoded, visualized, strategically analysed, then acted upon.  At the completion of my work, Deep Green could compete with a human opponent.</p></div>
+  Markdown: |
+    At Queen's University I used computer-vision and trigonometric techniques to localize and identify pool balls for the Deep Green(TM) pool-playing robot.  This enabled the game state to be encoded, visualized, strategically analysed, then acted upon.  At the completion of my work, Deep Green could compete with a human opponent.
 

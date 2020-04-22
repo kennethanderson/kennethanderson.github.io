@@ -2,26 +2,26 @@ hasimg: true
 Sections:
 - Title: Avidbots
   Image: "images/neo.jpg"
-  Content: |
-    <div class="paragraph"><p>At Avidbots, I wrote the software framework for two large-scale commercial floor-cleaning robots.  This framework includes components for motion planning, communication, visualization, live view, and control.  The motion planner encompasses the  most complexity, containing a complete coverage planning algorithm, dynamic and static constraints, and dynamic obstacle avoidance.  Avidbots was a 2014 Haxlr8r incubator participant, a 2014 Robot Launch semifinalist, has raised multiple rounds, and has over 80 employees.</p></div>
+  Markdown: |
+    At Avidbots, I wrote the software framework for two large-scale commercial floor-cleaning robots.  This framework includes components for motion planning, communication, visualization, live view, and control.  The motion planner encompasses the  most complexity, containing a complete coverage planning algorithm, dynamic and static constraints, and dynamic obstacle avoidance.  Avidbots was a 2014 Haxlr8r incubator participant, a 2014 Robot Launch semifinalist, has raised multiple rounds, and has over 80 employees.
 
 - Title: PR2
   Image: "images/ArmPlanning.png"
-  Content: |
-    <div class="paragraph"><p>At Willow Garage, I improved the arm navigation stack by gathering statistics for comparing motion-planning algorithms; creating a very fast time parametrization algorithm that enforces dynamic constraints (velocity and acceleration) on a given trajectory; and improving distance field calculations by using incremental updates.  The filter and incremental updates improved the speed of the existing components by 100-fold and 30-fold, respectively.  This work is now a key component in the trajectory planning portion of the  open source ROS (Robot Operating System) and MoveIt library, which is used by over 65 robots.</p></div>
+  Markdown: |
+    At Willow Garage, I improved the arm navigation stack by gathering statistics for comparing motion-planning algorithms; creating a very fast time parametrization algorithm that enforces dynamic constraints (velocity and acceleration) on a given trajectory; and improving distance field calculations by using incremental updates.  The filter and incremental updates improved the speed of the existing components by 100-fold and 30-fold, respectively.  This work is now a key component in the trajectory planning portion of the  open source ROS (Robot Operating System) and MoveIt library, which is used by over 65 robots.
 
 - Title: Space Station Remote Manipulator System
   Image: "images/SSRMS.png"
-  Content: |
-    <div class="paragraph"><p>At Queen&#8217;s University, I worked in the Robotics and Computer Vision Laboratory under the supervision of Dr. Michael Greenspan.  I implemented Greenspan&#8217;s patented collision detection algorithm and visualization system for use with MD Robotics' SSRMS (aka. Canadarm2&#174;).  This technique used specialized representations of objects (spheres and voxels) in order to perform real-time collision detection on an embedded system.  Results were published Symposium on Robot Design, Dynamics and Control, 2004.</p></div>
+  Markdown: |
+    At Queen's University, I worked in the Robotics and Computer Vision Laboratory under the supervision of Dr. Michael Greenspan.  I implemented Greenspan's patented collision detection algorithm and visualization system for use with MD Robotics' SSRMS (aka. Canadarm2(R)).  This technique used specialized representations of objects (spheres and voxels) in order to perform real-time collision detection on an embedded system.  Results were published Symposium on Robot Design, Dynamics and Control, 2004.
 
 - Title: Deep Green
   Image: "images/deepGreen2.JPG"
-  Content: |
-    <div class="paragraph"><p>At Queen&#8217;s, the majority of my time was spent on Deep Green&#8482;, a robot designed to play pool. I was involved in multiple aspects of the project.  I used image processing techniques to localize the pool balls on the surface of the table.  I implemented lighting strategies to minimize shadows affecting the computer vision.  I investigated a new calibration technique for a local, cue-mounted camera.  Additionally, I developed a simulated environment to test out my AI shot strategies.  We were featured on the the Discovery Channel, Slashdot, and YouTube.</p></div>
+  Markdown: |
+    At Queen's, the majority of my time was spent on Deep Green(TM), a robot designed to play pool. I was involved in multiple aspects of the project.  I used image processing techniques to localize the pool balls on the surface of the table.  I implemented lighting strategies to minimize shadows affecting the computer vision.  I investigated a new calibration technique for a local, cue-mounted camera.  Additionally, I developed a simulated environment to test out my AI shot strategies.  We were featured on the the Discovery Channel, Slashdot, and YouTube.
 
 - Title: Kato
   Image: "images/kato3.jpg"
-  Content: |
-    <div class="paragraph"><p>At the University of Alberta, I again had an opportunity to work on a robotics research project. This time our team modified Kato&#8482;, a robotic Segway, to geocache in a park (navigate from one GPS location to another). My particular task involved accessing the drivability of terrain, which I determined through structured crash-tests. Our final field test was shown again on the Discovery Channel and the Edmonton Journal.</p></div>
+  Markdown: |
+    At the University of Alberta, I again had an opportunity to work on a robotics research project. This time our team modified Kato(TM), a robotic Segway, to geocache in a park (navigate from one GPS location to another). My particular task involved accessing the drivability of terrain, which I determined through structured crash-tests. Our final field test was shown again on the Discovery Channel and the Edmonton Journal.
 

@@ -12,8 +12,9 @@ all: $(HTML)
 nav.mustache: nav.md
 	markdown nav.md > nav.mustache
 
-../%.html: %.yaml template.mustache nav.mustache
-	mustache $*.yaml template.mustache > ../$*.html
+../%.html: %.yaml template.mustache nav.mustache markdown.awk
+	awk -f markdown.awk $*.yaml > .$*.yaml
+	mustache .$*.yaml template.mustache > ../$*.html
 
 #old ways
 #../%.html: %.txt template.awk
@@ -22,4 +23,4 @@ nav.mustache: nav.md
 #	mustache $< template.mustache > $@
 
 clean:
-	rm -f $(HTML) nav.mustache
+	rm -f $(HTML) nav.mustache .*.yaml
