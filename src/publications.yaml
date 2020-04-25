@@ -1,23 +1,25 @@
----
 Sections:
 - Title: Publications
   Markdown: |
     * Ken Anderson, "Tree Cache". Symposium on Combinatorial Search (SoCS). 2012.
     
-    * Kenneth Anderson, "[Additive Heuristic for Four-Connected Gridworlds](docs/anderson2010additive.pdf)". Symposium on Combinatorial Search (SoCS). 2010.
+    * Kenneth Anderson, "[Additive Heuristic for Four-Connected Gridworlds][1]". Symposium on Combinatorial Search (SoCS). 2010.
     
     * Larus Technologies & GE Fanuc Intelligent Platforms, "21st Century Territorial Security: a sensor networking approach", white paper, November 2008.
     
     * M\. Greenspan, J. Lam, W. Leckie, M. Godard, I. Zaidi, K. Anderson, D. Dupuis, and S. Jordan, "Toward a Competitive Pool Playing Robot", IEEE Computer Magazine, vol. 41(1):46-53, Jan. 2008.
     
-    * Kenneth Anderson, Nathan Sturtevant, Robert Holte, and Jonathan Schaeffer.  "[Coarse-to-Fine Search Techniques](docs/anderson2007coarseToFine_tech.pdf)", Technical Report TR 08-05, 2008.
+    * Kenneth Anderson, Nathan Sturtevant, Robert Holte, and Jonathan Schaeffer.  "[Coarse-to-Fine Search Techniques][2]", Technical Report TR 08-05, 2008.
     
-    * Kenneth Anderson. "[Memory and Abstraction used for Heuristics in Single-Agent Search](docs/anderson2007thesis.pdf)", M.Sc. Thesis, 2007.
+    * Kenneth Anderson. "[Memory and Abstraction used for Heuristics in Single-Agent Search][3]", M.Sc. Thesis, 2007.
     
-    * Kenneth Anderson, Robert Holte, and Jonathan Schaeffer. "[Partial Pattern Databases](docs/anderson2007ppdb.pdf)". Symposium on Abstraction, Reformulation, and Approximation (SARA). Pages 20-34. Whistler, Canada. 2007.
+    * Kenneth Anderson, Robert Holte, and Jonathan Schaeffer. "[Partial Pattern Databases][4]". Symposium on Abstraction, Reformulation, and Approximation (SARA). Pages 20-34. Whistler, Canada. 2007.
     
     * Michael Greenspan, Joseph Lam, Will Leckie, Marc Godard, Imran Zaidi, Ken Anderson, Donna Dupuis, and Sam Jordan. "Toward a Competitive Pool Playing Robot: Is Computational Intelligence Needed to Play Robotic Pool?" IEEE Symposium on Computational Intelligence and Games (CIG). Pages 380-388. Honolulu, Hawaii. 2007.
     
     * D\. Chris Rayner, Katherine Davison, Vadim Bulitko, Kenneth Anderson, and Jieshan Lu. "Real-Time Heuristic Search with a Priority Queue". International Joint Conference on Artificial Intelligence (IJCAI). Pages 2372-2377. Hyderabad, India. 2007.
     
----
+    [1]: docs/anderson2010additive.pdf
+    [2]: docs/anderson2007coarseToFine_tech.pdf
+    [3]: docs/anderson2007thesis.pdf
+    [4]: docs/anderson2007ppdb.pdf

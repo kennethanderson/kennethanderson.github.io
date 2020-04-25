@@ -1,12 +1,12 @@
-#!/bin/awk
+#!/usr/bin/awk -f
 # Scan through YAML.  
-# If markdown is found, convert it the html.
+# If Markdown is found, convert it the Html.
 #
-# awk -f test.awk publications.md
+# Usage:
+#   cat file.yaml | ./markdown.awk
 #
 
-BEGIN {
-}
+BEGIN { }
 
 # Start
 $0 ~ /^  Markdown: \|/ {
@@ -36,5 +36,4 @@ $0 !~ /^    / {
   MARKDOWN_START = MARKDOWN_END = 0
 }
 
-END {
-}
+END {}

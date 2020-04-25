@@ -8,6 +8,6 @@ hasimg: true
 Sections:
 - Title: Ken Anderson
   Markdown: |
-    I am a software engineer in Ottawa, Canada. My interests include robotics, artificial intelligence, data fusion, and video processing. I have worked on a variety of projects over the years in academia and industry. You can find out more information about my projects and experience in the following pages.
+    I am a software engineer in Ottawa, Canada. My interests include robotics, artificial intelligence, data fusion, and video processing. You can find out more information about my academic and industrial projects in the following pages.
   Image: "images/KenAndPr2.JPG"
 

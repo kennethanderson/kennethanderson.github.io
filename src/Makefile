@@ -1,19 +1,30 @@
-#
-# Generate html snippets with markdown:
-#   md --> html
-# Generate the html pages with a template: 
-#   yaml + mustache --> html
-#
 
-HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html nav.mustache
+HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
+PARTIALS := .nav.mustache
+
+#.INTERMEDIATE: .nav.mustache
+#.SECONDARY: .nav.mustache
+MAKEFLAGS += --no-builtin-rules
+.SUFFIXES:
+#.SUFFIXES: .you .own .here
 
 all: $(HTML)
 
-nav.mustache: nav.md
-	markdown nav.md > nav.mustache
-
-../%.html: %.yaml template.mustache nav.mustache markdown.awk
+#
+# Generate html snippets with markdown:
+#   md --> html
+#
+.%.mustache: %.md
+	markdown $*.md > .$*.mustache
+# YAML-embedded Markdown
+.%.yaml: %.yaml markdown.awk
 	awk -f markdown.awk $*.yaml > .$*.yaml
+
+#
+# Generate the html pages with a template: 
+#   yaml + mustache --> html
+#
+../%.html: .%.yaml $(PARTIALS) template.mustache
 	mustache .$*.yaml template.mustache > ../$*.html
 
 #old ways
@@ -23,4 +34,5 @@ nav.mustache: nav.md
 #	mustache $< template.mustache > $@
 
 clean:
-	rm -f $(HTML) nav.mustache .*.yaml
+	rm -f $(HTML) $(PARTIALS) .*.yaml
+

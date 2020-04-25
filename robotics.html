@@ -11,8 +11,7 @@
 <body>
 <div id="container">
 
-<div>
-<header>
+<div id="header">
 <nav>
   <ul>
   <li><a href="index.html"><img src="images/favicon.png" alt="Image" />Ken Anderson</a></li>
@@ -23,7 +22,6 @@
   </ul>
   
 </nav>
-</header>
 </div>
 <div class="clearfix"></div>
 
@@ -31,9 +29,12 @@
 
 
   <section>
-    <h2>Avidbots</h2>
+    <header>
+      <h2>Neo</h2>
+      <p class="subtitle">Avidbots</p>
+    </header>
     <div class="sectionbody">
-    <p>At Avidbots, I wrote the software framework for two large-scale commercial floor-cleaning robots.  This framework includes components for motion planning, communication, visualization, live view, and control.  The motion planner encompasses the  most complexity, containing a complete coverage planning algorithm, dynamic and static constraints, and dynamic obstacle avoidance.  Avidbots was a 2014 Haxlr8r incubator participant, a 2014 Robot Launch semifinalist, has raised multiple rounds, and has over 80 employees.</p>
+    <p>I cofounded Avidbots in 2014.  I wrote the software framework for two large-scale commercial floor-cleaning robots.  This framework includes components for motion planning, communication, visualization, live view, and control.  The motion planner encompasses the  most complexity, containing a complete coverage planning algorithm, dynamic and static constraints, and dynamic obstacle avoidance.  Avidbots was a 2014 Haxlr8r incubator participant, a 2014 Robot Launch semifinalist, has raised multiple rounds, and has over 80 employees.</p>
 
     </div>
     <div class="imageblock"><div class="content">
@@ -41,9 +42,12 @@
     </div></div>
   </section>
   <section>
-    <h2>PR2</h2>
+    <header>
+      <h2>PR2</h2>
+      <p class="subtitle">Willow Garage</p>
+    </header>
     <div class="sectionbody">
-    <p>At Willow Garage, I improved the arm navigation stack by gathering statistics for comparing motion-planning algorithms; creating a very fast time parametrization algorithm that enforces dynamic constraints (velocity and acceleration) on a given trajectory; and improving distance field calculations by using incremental updates.  The filter and incremental updates improved the speed of the existing components by 100-fold and 30-fold, respectively.  This work is now a key component in the trajectory planning portion of the  open source ROS (Robot Operating System) and MoveIt library, which is used by over 65 robots.</p>
+    <p>I improved the arm navigation stack by gathering statistics for comparing motion-planning algorithms; creating a very fast time parametrization algorithm that enforces dynamic constraints (velocity and acceleration) on a given trajectory; and improving distance field calculations by using incremental updates.  The filter and incremental updates improved the speed of the existing components by 100-fold and 30-fold, respectively.  This work is now a key component in the trajectory planning portion of the  open source ROS (Robot Operating System) and MoveIt library, which is used by over 65 robots.</p>
 
     </div>
     <div class="imageblock"><div class="content">
@@ -51,9 +55,12 @@
     </div></div>
   </section>
   <section>
-    <h2>Space Station Remote Manipulator System</h2>
+    <header>
+      <h2>Space Station Remote Manipulator System</h2>
+      <p class="subtitle">Queen&#39;s University</p>
+    </header>
     <div class="sectionbody">
-    <p>At Queen&rsquo;s University, I worked in the Robotics and Computer Vision Laboratory under the supervision of Dr. Michael Greenspan.  I implemented Greenspan&rsquo;s patented collision detection algorithm and visualization system for use with MD Robotics' SSRMS (aka. Canadarm2&reg;).  This technique used specialized representations of objects (spheres and voxels) in order to perform real-time collision detection on an embedded system.  Results were published Symposium on Robot Design, Dynamics and Control, 2004.</p>
+    <p>I worked in the Robotics and Computer Vision Laboratory under the supervision of Dr. Michael Greenspan.  I implemented Greenspan&rsquo;s patented collision detection algorithm and visualization system for use with MD Robotics' SSRMS (aka. Canadarm2&reg;).  This technique used specialized representations of objects (spheres and voxels) in order to perform real-time collision detection on an embedded system.  Results were published Symposium on Robot Design, Dynamics and Control, 2004.</p>
 
     </div>
     <div class="imageblock"><div class="content">
@@ -61,9 +68,12 @@
     </div></div>
   </section>
   <section>
-    <h2>Deep Green</h2>
+    <header>
+      <h2>Deep Green</h2>
+      <p class="subtitle">Queen&#39;s University</p>
+    </header>
     <div class="sectionbody">
-    <p>At Queen&rsquo;s, the majority of my time was spent on Deep Green&trade;, a robot designed to play pool. I was involved in multiple aspects of the project.  I used image processing techniques to localize the pool balls on the surface of the table.  I implemented lighting strategies to minimize shadows affecting the computer vision.  I investigated a new calibration technique for a local, cue-mounted camera.  Additionally, I developed a simulated environment to test out my AI shot strategies.  We were featured on the the Discovery Channel, Slashdot, and YouTube.</p>
+    <p>I worked on multiple aspects of the robotic pool-playing robot Deep Green&trade;.  I used image processing techniques to localize the pool balls on the surface of the table.  I implemented lighting strategies to minimize shadows affecting the computer vision.  I investigated a new calibration technique for a local, cue-mounted camera.  Additionally, I developed a simulated environment to test out my AI shot strategies.  We were featured on the the Discovery Channel, Slashdot, and YouTube.</p>
 
     </div>
     <div class="imageblock"><div class="content">
@@ -71,9 +81,12 @@
     </div></div>
   </section>
   <section>
-    <h2>Kato</h2>
+    <header>
+      <h2>Kato</h2>
+      <p class="subtitle">University of Alberta</p>
+    </header>
     <div class="sectionbody">
-    <p>At the University of Alberta, I again had an opportunity to work on a robotics research project. This time our team modified Kato&trade;, a robotic Segway, to geocache in a park (navigate from one GPS location to another). My particular task involved accessing the drivability of terrain, which I determined through structured crash-tests. Our final field test was shown again on the Discovery Channel and the Edmonton Journal.</p>
+    <p>Our team modified Kato&trade;, a robotic Segway, to geocache (navigate from one GPS location to another). I taught the robot to access terrain drivability through a series of structured crash-tests. Our final field test was shown again on the Discovery Channel and the Edmonton Journal.</p>
 
     </div>
     <div class="imageblock"><div class="content">
@@ -82,7 +95,7 @@
   </section>
 
 </div>
-<footer>Copyright &copy; Ken Anderson, 2007-2020</footer>
+<div id="footer">Copyright &copy; Ken Anderson, 2007-2020</div>
 </div>
 </body>
 </html>

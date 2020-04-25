@@ -1,6 +1,7 @@
 Dependencies:
 - markdown (text -> html)
 - mustache (templating engine)
+- awk/sed (to wrap the yaml-embedded markdown)
 
 Although this is a simple site, making it mobile friendly 
 requires fine-tuned html output.  
@@ -18,22 +19,19 @@ Markdown and Mustache are simple and well-used.  But there are some pecularities
 
 Considered options:
 
-Asciidoc allows me to write entire html pages in simple syntax, 
-which can be converted directly to styled html.
-Some other good things about asciidoc--
-- asciidoc has a single standard, and is extensible.
-- asciidoc has syntax highlighting in vim.
-- asciidoc converts bullet/numbered lists, tables, (R)(TM)(C), arrows by default.
-- asciidoc can convert to multiple output types.
-- asciidoc is recommended by Linus Torvalds and Eric Raymond.
-- used to in git project.
-
-On the downside-- 
-- asciidoc is more complicated and requires bigger installation package(s).
-- asciidoc implementation is in Python.
-  asciidoctor implementation is in Ruby. (which is ~25x faster... actually).
-
-For syntax help--
+Asciidoc (viable)
++ Write entire page and convert to html (or other output types).
++ Single standard, and is extensible (no 'flavours').
++ Syntax highlighting in vim.
++ Converts bullet/numbered lists, tables, (R)(TM)(C), arrows by default.
++ Recommended by Linus Torvalds and Eric Raymond.
++ used to in git project.
+- asciidoc is overkill: complicated to accomidate different doc types, and big installation package(s).
+- asciidoc implementated in Python.
+  asciidoctor implementated in Ruby (~100x faster).
+  But asciidoctor not entirely compatible:
+  - a new output type (encapsulated html or some such)
+  - doesn't support .conf files.
 - https://powerman.name/doc/asciidoc
 
 reStructuredText (viable)
@@ -45,11 +43,14 @@ reStructuredText (viable)
 - rst doesn't really do tables by default.
 
 Markdown
-- markdown is only converted outside block elements, doesn't handle tables, etc.
-  The block element is a big problem, it would force me to split every section (with a header)
-  then recombine them all!  Leading to serious file proliferation.
-- markdown has multiple 'flavours' to deal with some of these deficiencies.  
-  But then you have to choose a standard and cross your fingers.
++ simple and readable
++ block html elements (p,div,table,pre) separated by blank lines.
++ span elements: links, emphais, code, images
++ converts & < ' " (R) (TM) (C) 1/2 1/4 3/4 ...
++ backslash escape \* \_ \. (bold, italics, # list)
+- markdown has multiple 'flavours' to deal with some deficiencies.  
+- https://daringfireball.net/projects/markdown/syntax#list
+- http://geog.uoregon.edu/bartlein/courses/geog607/Rmd/MDquick-refcard.pdf
 
 line-oriented data + awk template (discarded)
 - handling multiline data in awk was a royal pain.

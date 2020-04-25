@@ -11,12 +11,10 @@
 <body>
 <div id="container">
 
-<div>
-<header>
+<div id="header">
 <nav>
   {{> nav}}
 </nav>
-</header>
 </div>
 <div class="clearfix"></div>
 
@@ -28,7 +26,12 @@
 
 {{#Sections}}
   <section>
-    <h2>{{Title}}</h2>
+    <header>
+      <h2>{{Title}}</h2>
+{{#Subtitle}}
+      <p class="subtitle">{{Subtitle}}</p>
+{{/Subtitle}}
+    </header>
     <div class="sectionbody">
     {{{Html}}}
     </div>
@@ -41,7 +44,7 @@
 {{/Sections}}
 
 </div>
-<footer>Copyright &copy; Ken Anderson, 2007-2020</footer>
+<div id="footer">Copyright &copy; Ken Anderson, 2007-2020</div>
 </div>
 </body>
 </html>
