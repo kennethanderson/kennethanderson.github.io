@@ -1,12 +1,8 @@
 
-HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
+YAML := index.yaml ai.yaml publications.yaml robotics.yaml video.yaml
+YAML2 := .index.yaml .ai.yaml .publications.yaml .robotics.yaml .video.yaml
 PARTIALS := .nav.mustache
-
-#.INTERMEDIATE: .nav.mustache
-#.SECONDARY: .nav.mustache
-MAKEFLAGS += --no-builtin-rules
-.SUFFIXES:
-#.SUFFIXES: .you .own .here
+HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
 
 all: $(HTML)
 
@@ -27,12 +23,10 @@ all: $(HTML)
 ../%.html: .%.yaml $(PARTIALS) template.mustache
 	mustache .$*.yaml template.mustache > ../$*.html
 
-#old ways
-#../%.html: %.txt template.awk
-#	asciidoc --conf-file=template.conf -a linkcss -o ../$*.html $*.adoc
-#	awk -f template.awk $< > $@
-#	mustache $< template.mustache > $@
-
 clean:
-	rm -f $(HTML) $(PARTIALS) .*.yaml
+	rm -f $(HTML) $(PARTIALS) $(YAML2)
+
+#.SECONDARY: $(PARTIALS) $(YAML2) # for debugging
+MAKEFLAGS += --no-builtin-rules
+.SUFFIXES:
 

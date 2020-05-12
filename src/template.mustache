@@ -9,42 +9,42 @@
 </head>
 
 <body>
-<div id="container">
+<!--div id="container"-->
 
 <div id="header">
-<nav>
-  {{> nav}}
-</nav>
+  <h1><a href="index.html"><img src="images/favicon.png" alt="Image" /> Ken Anderson</a></h1>
+</div>
+<div id="nav">
+  {{> .nav}}
 </div>
 <div class="clearfix"></div>
 
-<div id="content"{{#hasimg}} class="hasimg"{{/hasimg}}>
+<div id="content">
 
 {{#Title}}
   <h1>{{Title}}</h1>
 {{/Title}}
 
+<div class="row">
 {{#Sections}}
-  <section>
+  <section {{#layout}} class="{{layout}}" {{/layout}}>
     <header>
       <h2>{{Title}}</h2>
 {{#Subtitle}}
       <p class="subtitle">{{Subtitle}}</p>
 {{/Subtitle}}
     </header>
-    <div class="sectionbody">
+{{#Image}}
+    <img src="{{Image}}" alt="">
+{{/Image}}
+    <div>
     {{{Html}}}
     </div>
-{{#Image}}
-    <div class="imageblock"><div class="content">
-    <img src="{{Image}}" alt="">
-    </div></div>
-{{/Image}}
   </section>
 {{/Sections}}
+</div>
 
 </div>
-<div id="footer">Copyright &copy; Ken Anderson, 2007-2020</div>
-</div>
+<div id="footer">&copy; Ken Anderson, 2007-2020</div>
 </body>
 </html>

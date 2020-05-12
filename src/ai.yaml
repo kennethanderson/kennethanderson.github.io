@@ -1,10 +1,10 @@
 #Title: Ken Anderson
-hasimg: true
+layout: columns-2
 Sections:
 - Title: Fast Path Planning
   Subtitle: Grid-Based Path Planning Competition
   Markdown: |
-    Tree Cache, my entry in the annual grid-based path planning competition (GPPC), combines search-based algorithms, fast lookups, and an extremely well-considered implementation. It has held the fastest entry for two years running.
+    Tree Cache, my entry in the annual grid-based path planning competition (GPPC), combines search-based algorithms, fast lookups, and an optimized implementation. It has held the fastest entry for two years running.
   Image: "images/bg.png"
   
 - Title: Additive Heuristic

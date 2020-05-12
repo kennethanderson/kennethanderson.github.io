@@ -8,7 +8,7 @@
 
 BEGIN { }
 
-# Start
+# Start and end (based on indentation)
 $0 ~ /^  Markdown: \|/ {
   MARKDOWN_START = 1
 }

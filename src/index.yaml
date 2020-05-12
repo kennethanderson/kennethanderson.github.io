@@ -1,10 +1,10 @@
 #
 # Do NOT use multidocument YAML.
 # Although the mustache manpage says it's supported, it is not.
-# Try the example and see...
+# Try the manpage example and see...
 #
 
-hasimg: true
+layout: columns-1
 Sections:
 - Title: Ken Anderson
   Markdown: |
