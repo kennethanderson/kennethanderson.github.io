@@ -22,7 +22,7 @@ body {
 }
 #header img {
   vertical-align: middle;
-  max-height: 8rem;
+  height: 8rem;
 }
 #header a {
   text-decoration: none;
@@ -109,7 +109,7 @@ section img {
     font-size: 35px;
   }
   #header img {
-    max-height: 6rem;
+    height: 6rem;
   }
   #nav a { /* 2 rows */
     width: 45%;
@@ -124,7 +124,7 @@ section img {
     font-size: 30px;
   }
   #header img {
-    max-height: 4rem;
+    height: 4rem;
   }
   #nav a { /* stack */
     float: none;

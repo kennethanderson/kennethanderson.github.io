@@ -17,8 +17,8 @@ $0 !~ /^    / {
 }
 
 {
-  # strip indentation, convert to html, then add indentation back in.
-  convert = "sed 's/^    //' | markdown | sed 's/^/    /'"
+  # strip indentation, convert to html, handle (R)(C)(TM), then add indentation back in.
+  convert = "sed 's/^    //' | markdown | sed 's/(R)/\\&reg;/g; s/(C)/\\&copy;/g; s/(TM)/\\&trade;/g' | sed 's/^/    /'"
   if (MARKDOWN_START) {
     MARKDOWN = 1
     print "  Html: |"
