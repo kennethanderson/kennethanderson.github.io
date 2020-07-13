@@ -1,0 +1,8 @@
+digraph G {
+  layout=dot
+  node [shape=point]
+  edge [arrowhead=vee, penwidth=1.4]
+  a -> {b c}
+  b -> {d e}
+  c -> {f g}
+}

@@ -4,24 +4,22 @@ YAML2 := .index.yaml .ai.yaml .publications.yaml .robotics.yaml .video.yaml
 PARTIALS := .nav.mustache
 HTML := ../index.html ../ai.html ../publications.html ../robotics.html ../video.html
 
-all: $(HTML)
+all: $(HTML) ../images/favicon.svg
 
-#
-# Generate html snippets with markdown:
-#   md --> html
-#
+# markdown --> html snippet
+# also handle markdown embedded in yaml
 .%.mustache: %.md
 	markdown $*.md > .$*.mustache
-# YAML-embedded Markdown
 .%.yaml: %.yaml markdown.awk
 	awk -f markdown.awk $*.yaml > .$*.yaml
 
-#
-# Generate the html pages with a template: 
-#   yaml + mustache --> html
-#
+# yaml + template.mustache --> html page
 ../%.html: .%.yaml $(PARTIALS) template.mustache
 	mustache .$*.yaml template.mustache > ../$*.html
+
+# Favicon
+../images/favicon.svg: favicon.gv
+	dot -Tsvg favicon.gv -o ../images/favicon.svg
 
 clean:
 	rm -f $(HTML) $(PARTIALS) $(YAML2)

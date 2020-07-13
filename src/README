@@ -1,9 +1,10 @@
 Dependencies:
 - markdown (text -> html)
 - mustache (templating engine)
+- graphviz
 - awk/sed (to wrap the yaml-embedded markdown)
 Ubuntu 18.04:
-- sudo apt install markdown ruby-mustache
+- sudo apt install markdown ruby-mustache graphviz
 
 Although this is a simple site, making it mobile friendly 
 requires fine-tuned html output.  
